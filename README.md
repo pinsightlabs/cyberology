@@ -4,7 +4,7 @@
 
 This is my catch-all repo for the cybersecurity work I'm learning and teaching. It's a growing, hands-on knowledge base built from the ground up. I keep my notes, references, and study material here so they stay in one place, and I'm sharing them publicly in case they help you too. Feel free to use anything here in your own classroom or your own prep.
 
-Everything is written as study material for learning and for authorized systems only. I'm learning right alongside anyone reading this, so if something is wrong or unclear, I'd genuinely like to hear it. Open an issue and tell me what works for you.
+Everything here is study material. The techniques are for learning and for use only on systems you own or have explicit permission to test. I'm learning right alongside anyone reading this, so if something is wrong or unclear, I'd genuinely like to hear it. Open an issue and tell me what works for you.
 
 > [!NOTE]
 > This repo grows over time. Sections marked "in progress" are on the way. The command-line section is live and complete.
@@ -34,7 +34,7 @@ Keep the [quick reference](command-line/cmd-quick-reference.md) open while you p
 
 ## Who Made This
 
-Patrick Nolen is a CTE Cybersecurity teacher documenting his journey of ethical hacking from the ground up. Follow along on Medium.
+Patrick Nolen is a CTE Cybersecurity teacher documenting his journey of ethical hacking from the ground up. Follow along on LinkedIn.
 
 - LinkedIn: linkedin.com/in/teachnolen
 - Instagram: @teachnolen

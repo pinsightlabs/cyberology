@@ -1,95 +1,63 @@
-# Python Lesson: Writing a Password Checker
+# Python for Beginners: Writing a Password Length Checker
 
-**TeachNolen | Learning • Training • Defending**
+A TeachNolen beginner Python lesson. In this activity, we'll write a program that asks for a password, counts its characters, and calculates how many characters are needed to reach a recommended minimum of 12.
 
-In this beginner Python lesson, we write a **password length checker**. The program asks a user to enter a password, counts its characters, and tells the user how many more characters are needed to reach a minimum length.
+## Watch the video lesson
 
-> **Note:** This is a learning exercise, not a complete password-strength checker. A password meeting a minimum length is not necessarily secure. Don't enter a real password when testing the program.
+[![Watch TeachNolen: Writing a Password Checker](https://img.youtube.com/vi/k41jO564PQY/hqdefault.jpg)](https://youtu.be/k41jO564PQY)
 
-## Watch the lesson
+[Watch the lesson on YouTube](https://youtu.be/k41jO564PQY)
 
-[![Watch TeachNolen: Python for Beginners — Writing a Password Checker](images/password-checker-thumbnail.png)](https://youtu.be/k41jO564PQY)
+## Concepts we'll use
 
-**[Watch the Python Password Checker video on YouTube](https://youtu.be/k41jO564PQY)**
+- **Variables:** Store values for use in a program.
+- **Functions:** `input()` collects text, `len()` counts characters, `str()` converts a number to text, and `print()` displays output.
+- **Concatenation:** Joins strings using `+`.
+- **Data types:** User input is a string; character counts and the minimum length are integers.
 
-## What you'll learn
+## Write the program
 
-- **Variables** — store values for use in a program.
-- **Functions** — use `input()`, `len()`, and `print()` to get input, count characters, and display output.
-- **Concatenation** — combine strings to build a message.
-- **Data types** — work with strings (`str`) and integers (`int`).
-
-## Build the program
-
-### 1. Ask for a password
-
-```python
-password = input("Enter a password to check: ")
-```
-
-`input()` reads what the user types as a **string**. The variable `password` stores that string.
-
-### 2. Set a minimum length and count characters
-
-```python
-minimum_length = 12
-password_length = len(password)
-```
-
-`minimum_length` stores an **integer**. The `len()` function returns the number of characters in `password`, also as an integer.
-
-### 3. Calculate how many more characters are needed
-
-```python
-characters_needed = minimum_length - password_length
-```
-
-Subtraction finds the difference between the minimum length and the entered password's length. A positive result means the password is too short; zero means it meets the minimum exactly; a negative result means it is longer than the minimum.
-
-### 4. Display a message
-
-```python
-if characters_needed > 0:
-    print("Your password needs " + str(characters_needed) + " more characters.")
-else:
-    print("Your password meets the minimum length.")
-```
-
-The `+` operator **concatenates** strings. We use `str(characters_needed)` because Python cannot concatenate a string and an integer directly. The `if` statement is an additional example of **selection**: the program chooses a message based on a condition.
-
-## Complete example
+Create a Python file and enter the following code, as demonstrated in the video:
 
 ```python
 # Password length checker
-minimum_length = 12
 
 password = input("Enter a password to check: ")
-password_length = len(password)
-characters_needed = minimum_length - password_length
+length = len(password)
+minimum = 12
 
-if characters_needed > 0:
-    print("Your password needs " + str(characters_needed) + " more characters.")
-else:
-    print("Your password meets the minimum length.")
+print("Your password is " + str(length) + " characters long.")
+print("The recommended minimum is " + str(minimum) + " characters.")
+print("Characters needed to reach the minimum: " + str(minimum - length))
+
+# Make sure you save your file
 ```
 
-## Try it yourself
+## Understand the code
 
-1. Run the program with a short **example** password, such as `abc123`.
-2. Run it again with a 12-character example.
-3. Change `minimum_length` to `16` and predict what will happen before running the program.
-4. Explain why `str(characters_needed)` is needed when concatenating the output message.
+1. `input()` prompts the user to enter a password and stores the text in `password`.
+2. `len(password)` counts the characters and stores the result in `length`.
+3. `minimum = 12` stores the target length as an integer.
+4. `str()` converts numeric results to strings so they can be concatenated with the messages in `print()`.
+5. `minimum - length` calculates the difference between the target length and the password length.
+6. Lines beginning with `#` are comments; Python does not execute them.
+
+## Try it
+
+Run the program using a password shorter than 12 characters, one exactly 12 characters long, and one longer than 12 characters. Observe how the last line changes.
+
+**Important:** This introductory program checks length only. It does not determine password strength or securely handle real passwords. Because the code has no conditional statement, passwords longer than 12 characters produce a negative number for “characters needed.” We leave that behavior unchanged to match the video.
 
 ## Check your understanding
 
-1. What value does the variable `password` store?
-2. What is the difference between `input()` and `print()`?
-3. What data type does `len(password)` return?
-4. What does `minimum_length - password_length` calculate?
-5. What is concatenation, and where is it used in this program?
+1. What does the `password` variable store?
+2. What does `len(password)` return?
+3. Why do we use `str(length)` inside the `print()` statement?
+4. What does the `+` operator do when joining strings?
+5. What does `minimum - length` calculate?
 
-## More resources
+---
 
-- [Cyberology GitHub repository](https://github.com/pinsightlabs/cyberology)
+**TeachNolen** — Learning • Training • Defending
 
-**Still Learning. Still Training. Still Defending.**
+[Cyberology GitHub repository](https://github.com/pinsightlabs/cyberology)
